@@ -13,6 +13,7 @@
     {"question": "Which number is even: 3 or 4?", "answers": ["4", "four"]},
     {"question": "What time is it when the clock shows both hands at 12?", "answers": ["12", "twelve", "noon", "midnight"]},
     {"question": "what is 4 plus 7", "answers": ["11", "eleven"]},
-    {"question": "How many sides does a pentagon have?", "answers": ["5", "five"]}
+    {"question": "How many sides does a pentagon have?", "answers": ["5", "five"]},
+    {"question": "How many sides does a hexagon have?", "answers": ["6", "six"]}
   ]
   
