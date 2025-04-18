@@ -1,0 +1,17 @@
+[
+  {"question": "Which word is the opposite of 'happy'?", "answers": ["sad"]},
+  {"question": "What do you call a word that means the same as another word?", "answers": ["synonym"]},
+  {"question": "What sound does the letter B make?", "answers": ["buh"]},
+  {"question": "Can you name a word that rhymes with 'cat'?", "answers": ["hat", "bat", "mat", "rat"]},
+  {"question": "Finish this sentence: The dog ran _____ the hill.", "answers": ["up", "down", "over"]},
+  {"question": "What do we call the name of a person, place, or thing?", "answers": ["noun"]},
+  {"question": "What is the first letter in the word 'elephant'?", "answers": ["e"]},
+  {"question": "What comes after 'Q' in the alphabet?", "answers": ["r", "R"]},
+  {"question": "Which word is a verb: run, blue, happy?", "answers": ["run"]},
+  {"question": "How many syllables are in the word 'banana'?", "answers": ["3", "three"]},
+  {"question": "Which is a question word: where, banana, fast?", "answers": ["where"]},
+  {"question": "What do you do at the end of a sentence?", "answers": ["period", "dot"]},
+  {"question": "What letter makes the 'sss' sound?", "answers": ["s"]},
+  {"question": "Which word is spelled correctly: freind or friend?", "answers": ["friend"]},
+  {"question": "Which word rhymes with 'tree'?", "answers": ["bee", "see", "knee", "me"]}
+]

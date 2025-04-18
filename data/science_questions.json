@@ -1,0 +1,18 @@
+[
+    {"question": "What part of the plant grows under the ground?", "answers": ["roots"]},
+    {"question": "Which sense helps you smell flowers?", "answers": ["nose", "smell"]},
+    {"question": "What does the sun give us to help plants grow?", "answers": ["light", "sunlight"]},
+    {"question": "Which animal lives in water and on land?", "answers": ["frog", "turtle"]},
+    {"question": "What do bees make that we can eat?", "answers": ["honey"]},
+    {"question": "What do we breathe in to stay alive?", "answers": ["air", "oxygen"]},
+    {"question": "What do you see in the sky at night that shines?", "answers": ["stars", "moon"]},
+    {"question": "Which season comes after spring?", "answers": ["summer"]},
+    {"question": "What is the color of healthy leaves?", "answers": ["green"]},
+    {"question": "Which animal says 'moo'?", "answers": ["cow"]},
+    {"question": "What do birds use to fly?", "answers": ["wings"]},
+    {"question": "What do we use to see things?", "answers": ["eyes"]},
+    {"question": "Which is a solid: juice or ice?", "answers": ["ice"]},
+    {"question": "Where do fish live?", "answers": ["water", "ocean", "sea", "river"]},
+    {"question": "What do plants need to grow besides sunlight?", "answers": ["water", "air", "soil"]}
+  ]
+  

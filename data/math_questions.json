@@ -1,0 +1,18 @@
+[
+    {"question": "What is 10 minus 4?", "answers": ["6", "six"]},
+    {"question": "If you have 2 apples and Mom gave you 2 more apples, how many apples do you have now?", "answers": ["4", "four"]},
+    {"question": "What number comes right before 13?", "answers": ["12", "twelve"]},
+    {"question": "How many sides does a triangle have?", "answers": ["3", "three"]},
+    {"question": "What number comes just after 7 ?", "answers": ["8", "eight"]},
+    {"question": "If I eat 3 out of 5 cookies, how many cookies are left?", "answers": ["2", "two"]},
+    {"question": "Which is greater: 7 or 5?", "answers": ["7", "seven"]},
+    {"question": "How many sides does a sqaue has ?", "answers": ["4", "four"]},
+    {"question": "What is 2 plus 3?", "answers": ["5", "five"]},
+    {"question": "Which number comes next: 5, 10, 15, ___?", "answers": ["20", "twenty"]},
+    {"question": "How many fingers on both hands?", "answers": ["10", "ten"]},
+    {"question": "Which number is even: 3 or 4?", "answers": ["4", "four"]},
+    {"question": "What time is it when the clock shows both hands at 12?", "answers": ["12", "twelve", "noon", "midnight"]},
+    {"question": "what is 4 plus 7", "answers": ["11", "eleven"]},
+    {"question": "How many sides does a pentagon have?", "answers": ["5", "five"]}
+  ]
+  
