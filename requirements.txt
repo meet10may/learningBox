@@ -1,3 +1,1 @@
-espeak==1.48.15
-pygame==2.3.0
-pytest==7.1.2
+pytest
