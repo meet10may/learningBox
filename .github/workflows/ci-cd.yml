@@ -47,11 +47,11 @@ jobs:
       # Set up SSH key for Raspberry Pi
       - name: Set up SSH key for Raspberry Pi
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          # Add Raspberry Pi to known hosts to avoid prompt for first connection
-          ssh-keyscan -H 192.168.1.26 >> ~/.ssh/known_hosts
+            mkdir -p ~/.ssh
+            echo "${{ secrets.PI_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+            chmod 600 ~/.ssh/id_rsa
+            # Add Raspberry Pi to known hosts to avoid prompt for first connection
+            ssh-keyscan -H 192.168.1.26 >> ~/.ssh/known_hosts
 
       # Ping Raspberry Pi to check connectivity
       - name: Ping Raspberry Pi to check connectivity
