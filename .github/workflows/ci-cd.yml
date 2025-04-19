@@ -2,57 +2,61 @@ name: Python CI and Deploy to Raspberry Pi
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+      # Checkout code
+      - uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-    
-    - name: Install espeak
-      run: sudo apt-get update && sudo apt-get install -y espeak
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      # Install espeak dependency
+      - name: Install espeak
+        run: sudo apt-get update && sudo apt-get install -y espeak
 
-    - name: Run tests
-      run: |
-        pytest tests
+      # Install other dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # Run tests
+      - name: Run tests
+        run: |
+          pytest tests
 
   deploy:
     runs-on: ubuntu-latest
-    needs: test  # Ensure that the deployment only runs after successful tests
+    needs: test  # Ensure that deployment only runs after successful tests
 
     steps:
       # Checkout the latest code
       - name: Checkout code
         uses: actions/checkout@v3
 
-    # Ping test to see if the Pi is reachable
+      # Set up SSH key for Raspberry Pi
+      - name: Set up SSH key for Raspberry Pi
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          # Add Raspberry Pi to known hosts to avoid prompt for first connection
+          ssh-keyscan -H 192.168.1.26 >> ~/.ssh/known_hosts
+
+      # Ping Raspberry Pi to check connectivity
       - name: Ping Raspberry Pi to check connectivity
         run: |
-            ping -c 4 192.168.1.26 || echo "Ping failed. Host not reachable."
-
-        # Test connection with curl (optional, for web service check)
-      - name: Test connection to Pi with curl
-        run: |
-            curl -v http://192.168.1.26:80 || echo "Connection failed. Host not reachable or service not running."
-      # Set up SSH key for Pi
-      - name: Set up SSH key
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.PI_DEPLOY_KEY }}
+          ping -c 4 192.168.1.26 || echo "Ping failed. Host not reachable."
 
       # Deploy and run main.py on Raspberry Pi
       - name: Deploy and run on Raspberry Pi
