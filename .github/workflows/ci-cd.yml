@@ -39,6 +39,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+    # Ping test to see if the Pi is reachable
+      - name: Ping Raspberry Pi to check connectivity
+        run: |
+            ping -c 4 192.168.1.26 || echo "Ping failed. Host not reachable."
+
+        # Test connection with curl (optional, for web service check)
+      - name: Test connection to Pi with curl
+        run: |
+            curl -v http://192.168.1.26:80 || echo "Connection failed. Host not reachable or service not running."
       # Set up SSH key for Pi
       - name: Set up SSH key
         uses: webfactory/ssh-agent@v0.5.3
