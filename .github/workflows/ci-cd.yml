@@ -48,7 +48,7 @@ jobs:
       # Deploy and run main.py on Raspberry Pi
       - name: Deploy and run on Raspberry Pi
         run: |
-          ssh -o StrictHostKeyChecking=no pi4kids@192.168.1.26 << 'EOF'
+          ssh -vvv -o StrictHostKeyChecking=no pi4kids@192.168.1.26 << 'EOF'
             cd /home/pi4kids/Documents/learningBox
             git pull origin main  # Get the latest code
             python3 -m pip install -r requirements.txt  # Install any new dependencies
